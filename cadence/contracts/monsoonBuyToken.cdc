@@ -1,3 +1,8 @@
+/**
+* SPDX-License-Identifier: UNLICENSED
+*/
+
+
 import FungibleToken from "./FungibleToken.cdc"
 
 pub contract monsoonBuyToken: FungibleToken {

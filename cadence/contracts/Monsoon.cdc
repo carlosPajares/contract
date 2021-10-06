@@ -1,3 +1,9 @@
+/**
+* SPDX-License-Identifier: UNLICENSED
+*/
+
+
+
 import NonFungibleToken from "./NonFungibleToken.cdc"
 // Monsoon
 // NFT items for cards!
