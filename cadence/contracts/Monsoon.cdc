@@ -12,7 +12,7 @@ pub contract Monsoon: NonFungibleToken {
     pub event Deposit(id: UInt64, to: Address?)
     pub event Minted(id: UInt64, templateID: UInt64, typeOfCard: UInt32, universeID: UInt32, numSeries: UInt32, numSerial: UInt32, CID: String)
     pub event monsoonCutPercentageChange(newPercent: UFix64)
-    pub event monsoonCutPercentageReciverChange(newReciver: Address)
+    pub event monsoonCutPercentageReceiverChange(newReceiver: Address)
 
 
 
@@ -41,7 +41,7 @@ pub contract Monsoon: NonFungibleToken {
     // Commission in the market of the sales 
     //
     pub var monsoonCutPercentage: UFix64
-    pub var addressRecivermonsoonCutPercentage: Address
+    pub var addressReceivermonsoonCutPercentage: Address
 
     // function to inform about all totals
     pub fun getTotals(): {String: UInt64} {
@@ -267,11 +267,11 @@ pub contract Monsoon: NonFungibleToken {
             // store the total supply by universe and type of cards
             let keyUnvTyp: String = universeID.toString().concat("_").concat(typeOfCard.toString()) 
             if (!Monsoon.totalSupplyUniverseType.containsKey(keyUnvTyp)) {
-                let old = Monsoon.totalSupplyUniverseType.insert(key: keyUnvTyp, 1)            
+                Monsoon.totalSupplyUniverseType.insert(key: keyUnvTyp, 1)            
             } else {  
                 var auxCont = Monsoon.totalSupplyUniverseType[keyUnvTyp] ?? (0 as UInt64)   
                 auxCont = auxCont + (1 as UInt64) 
-                let old = Monsoon.totalSupplyUniverseType.insert(key: keyUnvTyp, auxCont)            
+                Monsoon.totalSupplyUniverseType.insert(key: keyUnvTyp, auxCont)            
             }
             //-------------------------------------------------------
 
@@ -282,9 +282,9 @@ pub contract Monsoon: NonFungibleToken {
             emit monsoonCutPercentageChange(newPercent: Monsoon.monsoonCutPercentage)            
         }
 
-        pub fun changeaddressRecivermonsoonCutPercentage (newReciver: Address) {
-            Monsoon.addressRecivermonsoonCutPercentage = newReciver
-            emit monsoonCutPercentageReciverChange(newReciver: Monsoon.addressRecivermonsoonCutPercentage)            
+        pub fun changeaddressReceivermonsoonCutPercentage (newReceiver: Address) {
+            Monsoon.addressReceivermonsoonCutPercentage = newReceiver
+            emit monsoonCutPercentageReceiverChange(newReceiver: Monsoon.addressReceivermonsoonCutPercentage)            
         }
 
 
@@ -320,7 +320,7 @@ pub contract Monsoon: NonFungibleToken {
         self.totalBurned = 0
 
         self.monsoonCutPercentage = 0.05
-        self.addressRecivermonsoonCutPercentage = self.account.address
+        self.addressReceivermonsoonCutPercentage = self.account.address
         
 
 

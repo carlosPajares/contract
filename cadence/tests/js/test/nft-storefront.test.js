@@ -49,7 +49,7 @@ describe("NFT Storefront", () => {
 		// Setup
 		await deployNFTStorefront();
 
-		// Set the address in the contract for reciver de cut percentage of the sales
+		// Set the address in the contract for receiver de cut percentage of the sales
 		const Comisionist = await getAccountAddress("Comisionist");
 		await setupStorefrontOnAccount(Comisionist);
 		await changeAddressCut(Comisionist);
@@ -71,7 +71,7 @@ describe("NFT Storefront", () => {
 		// Setup
 		await deployNFTStorefront();
 
-		// Set the address in the contract for reciver de cut percentage of the sales
+		// Set the address in the contract for receiver de cut percentage of the sales
 		const Comisionist = await getAccountAddress("Comisionist");
 		await setupStorefrontOnAccount(Comisionist);
 		await changeAddressCut(Comisionist);
@@ -99,7 +99,7 @@ describe("NFT Storefront", () => {
 		await setupStorefrontOnAccount(Alice);
 		await mintmonsoonCard(cardData1, Alice);
 
-		// Set the address in the contract for reciver de cut percentage of the sales
+		// Set the address in the contract for receiver de cut percentage of the sales
 		const Comisionist = await getAccountAddress("Comisionist");
 		await setupStorefrontOnAccount(Comisionist);
 		await changeAddressCut(Comisionist);
@@ -136,7 +136,7 @@ describe("NFT Storefront", () => {
 		await setupStorefrontOnAccount(Alice);
 		await mintmonsoonCard(cardData1, Alice);
 
-		// Set the address in the contract for reciver de cut percentage of the sales
+		// Set the address in the contract for receiver de cut percentage of the sales
 		const Comisionist = await getAccountAddress("Comisionist");
 		await setupStorefrontOnAccount(Comisionist);
 		await changeAddressCut(Comisionist);
@@ -176,7 +176,7 @@ describe("NFT Storefront", () => {
 		// Mint instruction shall pass
 		await shallPass(mintmonsoonCard(cardData1, Alice));
 
-		// Set the address in the contract for reciver de cut percentage of the sales
+		// Set the address in the contract for receiver de cut percentage of the sales
 		const Comisionist = await getAccountAddress("Comisionist");
 		await setupStorefrontOnAccount(Comisionist);
 		await changeAddressCut(Comisionist);
@@ -211,7 +211,7 @@ describe("NFT Storefront", () => {
 		// Mint instruction shall pass
 		await shallPass(mintmonsoonCard(cardData1, Alice));
 
-		// Set the address in the contract for reciver de cut percentage of the sales
+		// Set the address in the contract for receiver de cut percentage of the sales
 		const Comisionist = await getAccountAddress("Comisionist");
 		await setupStorefrontOnAccount(Comisionist);
 		await changeAddressCut(Comisionist);

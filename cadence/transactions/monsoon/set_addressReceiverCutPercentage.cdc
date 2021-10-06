@@ -19,6 +19,6 @@ transaction(recipient: Address) {
     }
 
     execute {
-        self.minter.changeaddressRecivermonsoonCutPercentage(newReciver: recipient)
+        self.minter.changeaddressReceivermonsoonCutPercentage(newReceiver: recipient)
     }
 }

@@ -159,7 +159,7 @@ pub contract monsoonBuyToken: FungibleToken {
 
     init() {
         // Set our named paths.
-        //FIXME: REMOVE SUFFIX BEFORE RELEASE
+
         self.VaultStoragePath = /storage/monsoonBuyTokenVault
         self.ReceiverPublicPath = /public/monsoonBuyTokenReceiver
         self.BalancePublicPath = /public/monsoonBuyTokenBalance

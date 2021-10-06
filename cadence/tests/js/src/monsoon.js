@@ -79,7 +79,7 @@ export const getmonsoonTotalBurned = async () => {
 
 
 /*
- * Change the address of the cutPercentage reciver to **recipient**.
+ * Change the address of the cutPercentage receiver to **recipient**.
  * @param {string} recipient - recipient account address
  * @throws Will throw an error if execution will be halted
  * @returns {Promise<*>}
@@ -87,7 +87,7 @@ export const getmonsoonTotalBurned = async () => {
 export const changeAddressCut = async (recipient) => {
 	const MonsoonAdmin = await getMonsoonAdminAddress();
 
-	const name = "monsoon/set_addressReciverCutPercentage";	
+	const name = "monsoon/set_addressReceiverCutPercentage";	
 	const args = [recipient];
 	const signers = [MonsoonAdmin];
 

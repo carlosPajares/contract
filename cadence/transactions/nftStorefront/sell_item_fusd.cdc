@@ -19,7 +19,7 @@ transaction(saleItemID: UInt64, saleItemPrice: UFix64) {
         
         assert(self.fusdReceiver.borrow() != nil, message: "Missing or mis-typed FUSD receiver")
 
-        self.fusdReceiverCommission = getAccount(Monsoon.addressRecivermonsoonCutPercentage).getCapability<&FUSD.Vault{FungibleToken.Receiver}>(/public/fusdReceiver)!
+        self.fusdReceiverCommission = getAccount(Monsoon.addressReceivermonsoonCutPercentage).getCapability<&FUSD.Vault{FungibleToken.Receiver}>(/public/fusdReceiver)!
         
         assert(self.fusdReceiverCommission.borrow() != nil, message: "Missing or mis-typed FUSD receiver commissionist")
 

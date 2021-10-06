@@ -19,7 +19,7 @@ transaction(saleItemID: UInt64, saleItemPrice: UFix64) {
         
         assert(self.monsoonBuyTokenReceiver.borrow() != nil, message: "Missing or mis-typed monsoonBuyToken receiver")
 
-        self.monsoonBuyTokenReceiverCommision = getAccount(Monsoon.addressRecivermonsoonCutPercentage).getCapability<&monsoonBuyToken.Vault{FungibleToken.Receiver}>(monsoonBuyToken.ReceiverPublicPath)!
+        self.monsoonBuyTokenReceiverCommision = getAccount(Monsoon.addressReceivermonsoonCutPercentage).getCapability<&monsoonBuyToken.Vault{FungibleToken.Receiver}>(monsoonBuyToken.ReceiverPublicPath)!
         
         assert(self.monsoonBuyTokenReceiverCommision.borrow() != nil, message: "Missing or mis-typed monsoonBuyToken receiver  commisionist")
 
