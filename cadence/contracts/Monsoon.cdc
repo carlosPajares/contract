@@ -316,9 +316,9 @@ pub contract Monsoon: NonFungibleToken {
     //
 	init() {
         // Set our named paths
-        self.CollectionStoragePath = /storage/monsoonCollection
-        self.CollectionPublicPath = /public/monsoonCollection
-        self.MinterStoragePath = /storage/monsoonMinter
+        self.CollectionStoragePath = /storage/monsoonDigitalCollection
+        self.CollectionPublicPath = /public/monsoonDigitalCollection
+        self.MinterStoragePath = /storage/monsoonDigitalMinter
 
         // Initialize the total supply
         self.totalSupply = 0
